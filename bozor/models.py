@@ -16,8 +16,8 @@ class sotuvchi(models.Model):
 class mahsulot(models.Model):
     nomi = models.TextField(max_length=25)
     ics = models.DateField(default = datetime.now)
-    miqdori = models.IntegerField
-    owner = models.ForeignKey(sotuvchi,default=1, on_delete= models.CASCADE)
+    miqdori = models.IntegerField()
+    owner = models.ForeignKey(sotuvchi, on_delete= models.CASCADE)
     def __str__(self) -> str:
         return self.nomi
     
